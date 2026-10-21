@@ -78,6 +78,7 @@ with col1:
             
             # Predict AI's hypothetical profit to compare against actual
             env_copy = CafeSim()
+            env_copy.reset()  # <--- ADD THIS LINE
             env_copy.stock, env_copy.day_of_week, env_copy.event_today = current_stock, dow_int, event_int
             env_copy.step(ai_recommendation) # Run dummy step
             
